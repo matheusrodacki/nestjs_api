@@ -1,1 +1,12 @@
-GET http://localhost:8000/places?text=av pres tancredo neves, 1649, mogi guaçu - sp
+
+GET http://localhost:8000/places?text=av presidente tancredo neves, 1649, mogi guaçu - sp 
+
+###
+GET http://localhost:8000/places?text=rua julião afonso serra, 26, são paulo - sp
+
+###
+@originId = ChIJsUjleONXyJQRCXfMllIFZ3w
+@destinationId = ChIJy542H4lRzpQRlw95Era9ev4
+
+###
+GET http://localhost:8000/directions?originId={{ originId }}&destinationId={{ destinationId }}

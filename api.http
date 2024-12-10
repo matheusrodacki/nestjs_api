@@ -1,12 +1,28 @@
 
-GET http://localhost:8000/places?text=av presidente tancredo neves, 1649, mogi guaçu - sp 
+GET http://localhost:8008/places?text=av presidente tancredo neves, 1649, mogi guaçu - sp 
 
 ###
-GET http://localhost:8000/places?text=rua julião afonso serra, 26, são paulo - sp
+GET http://localhost:8008/places?text=rua julião afonso serra, 26, são paulo - sp
 
 ###
 @originId = ChIJsUjleONXyJQRCXfMllIFZ3w
 @destinationId = ChIJy542H4lRzpQRlw95Era9ev4
 
 ###
-GET http://localhost:8000/directions?originId={{ originId }}&destinationId={{ destinationId }}
+GET http://localhost:8008/directions?originId={{ originId }}&destinationId={{ destinationId }}
+
+###
+POST http://localhost:8008/routes
+Content-Type: application/json
+
+{
+    "name": "rota 1",
+    "source_id": "{{ originId }}",
+    "destination_id": "{{ destinationId }}"
+}
+
+###
+GET http://localhost:8008/routes
+
+###
+GET http://localhost:8008/routes/675842c3785bd585788febce

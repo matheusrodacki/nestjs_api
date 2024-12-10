@@ -4,7 +4,7 @@ services:
     volumes:
       - .:/home/node/app
     ports:
-      - 8000:8000
+      - 8008:8008
   db:
     build: ./.docker/mongodb
     environment:
